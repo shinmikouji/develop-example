@@ -1,0 +1,348 @@
+/* 色
+- 連番でホテルごとに追加
+- グラデーションで使ってる色は全てvariablesにしなくて良い（他と共通するものがあればそれだけvariablesに）
+- グレー系（r / g /b全て同じ値）はvariables化しない（種類ありすぎるので）
+--------------------------------------------------------- */
+$color-logo: #82734d;
+//resort
+$color-resort-01: #b89e46;
+$color-resort-02: #000000;
+$color-resort-03: #7f7f7f;
+$color-resort-04: #a49255;
+// $color-resort-reserve: $color-resort-01;
+$color-resort-select: rgba($color-resort-01, 0.6);
+$color-resort-bullet: $color-resort-01;
+//shigira
+$color-shigira-01: #1a1918;
+$color-shigira-02: #5f5c53;
+$color-shigira-03: #474543;
+$color-shigira-04: #877841;
+$color-shigira-05: #464543;
+$color-shigira-select: rgba($color-shigira-02, 0.6);
+//allamanda
+$color-allamanda-01: #c92358;
+$color-allamanda-02: #fcd101;
+$color-allamanda-03: #aa1b49;
+$color-allamanda-04: #73002b;
+$color-allamanda-05: #8b122c;
+$color-allamanda-06: #c41046;
+
+$color-allamanda-grad01: linear-gradient(to bottom, $color-allamanda-01, #e04878);
+$color-allamanda-grad02: linear-gradient(to bottom, $color-allamanda-04, #8c0033);
+$color-allamanda-grad03: linear-gradient(to bottom, #a60236, #8c012c);
+$color-allamanda-grad04: linear-gradient(to bottom, #e31b5a, #b11648);
+$color-allamanda-grad05: linear-gradient(
+  to right,
+  $color-allamanda-04 0%,
+  $color-allamanda-04 25%,
+  $color-allamanda-03 25%,
+  $color-allamanda-03 50%,
+  $color-allamanda-05 50%,
+  $color-allamanda-05 75%,
+  $color-allamanda-01 75%,
+  $color-allamanda-01 100%
+);
+$color-allamanda-grad06: linear-gradient(to bottom, #e04878, #f27eb0);
+$color-allamanda-hover: $color-allamanda-03;
+// $color-allamanda-reserve: $color-allamanda-01;
+$color-allamanda-select: rgba($color-allamanda-02, 0.6);
+$color-allamanda-bullet: $color-allamanda-01;
+//mirage
+$color-mirage-01: #003961;
+$color-mirage-02: #066594;
+$color-mirage-03: #035280;
+$color-mirage-04: #204675;
+$color-mirage-05: #0f5587;
+$color-mirage-06: #004f8c;
+$color-mirage-07: #097bbd;
+$color-mirage-08: #009bcf;
+$color-mirage-09: #a8a8a8; //silver
+$color-mirage-10: #d0d0d0; //silver
+$color-mirage-11: #cdcdcd; //silver
+$color-mirage-12: #dca9ff;
+$color-mirage-13: #0c1a2e;
+$color-mirage-grad01: linear-gradient(to bottom, $color-mirage-04, $color-mirage-05);
+$color-mirage-grad02: linear-gradient(to bottom, $color-mirage-07, $color-mirage-08);
+$color-mirage-grad03: linear-gradient(to bottom, $color-mirage-01, $color-mirage-06);
+$color-mirage-grad04: linear-gradient(to bottom, $color-mirage-02, $color-mirage-03);
+$color-mirage-grad05: linear-gradient(to bottom, $color-mirage-09, $color-mirage-10);
+$color-mirage-grad06: linear-gradient(to right, $color-mirage-09, $color-mirage-10);
+$color-mirage-grad07: linear-gradient(
+  to right,
+  $color-mirage-02 0%,
+  $color-mirage-02 25%,
+  $color-mirage-04 25%,
+  $color-mirage-04 50%,
+  $color-mirage-03 50%,
+  $color-mirage-03 75%,
+  $color-mirage-07 75%,
+  $color-mirage-07 100%
+);
+$color-mirage-select: rgba($color-mirage-12, 0.3);
+$color-mirage-hover: $color-mirage-08;
+$color-mirage-bullet: $color-mirage-08;
+//imgya
+$color-imgya-01: #5c3a15;
+$color-imgya-02: #f9f1d8;
+$color-imgya-03: #fff3cc;
+$color-imgya-04: #4f2b1c;
+$color-imgya-05: #ffeece;
+$color-imgya-06: #ffe4be;
+$color-imgya-07: #fff5e7;
+$color-imgya-08: #ddc67a;
+$color-imgya-09: #ffeec7;
+
+$color-imgya-select: rgba($color-imgya-01, 0.3);
+$color-imgya-hover: rgba($color-imgya-01, 0.8);
+$color-imgya-bullet: $color-imgya-01;
+//breezebay
+$color-breezebay-01: #ff8d29;
+$color-breezebay-02: #f29985;
+$color-breezebay-03: #f6b55d;
+$color-breezebay-04: #7bc4be;
+$color-breezebay-05: #ffeed3; //文字
+$color-breezebay-06: #f4ff22;
+$color-breezebay-07: #ff7859;
+$color-breezebay-08: #dfffea;
+$color-breezebay-09: #7abcff;
+$color-breezebay-10: #ffb10e; //問い合わせ、薄い色
+$color-breezebay-11: #ff937a; //問い合わせ、濃い色
+$color-breezebay-12: #ffeed2;
+$color-breezebay-13: #ea7f3a;
+$color-breezebay-14: #faaa1e;
+$color-breezebay-15: #ff7d5f;
+$color-breezebay-16: #ffb737;
+$color-breezebay-17: #62a8f1;
+$color-breezebay-18: #d6c693;
+$color-breezebay-grad01: linear-gradient(330deg, $color-breezebay-10, $color-breezebay-11);
+$color-breezebay-grad02: linear-gradient(to top, #dfffea 22.14%, #b5e2ec 45.61%, $color-breezebay-17);
+$color-breezebay-grad04: linear-gradient(to right top, rgba(#f4ff22, 0.7), rgba(#ff7859, 0.7) 70%);
+$color-breezebay-grad05: linear-gradient(to left top, rgba(#f4ff22, 0.7), rgba(#ff7859, 0.7) 70%);
+$color-breezebay-grad06: linear-gradient(to right top, #dfffea, #7abcff);
+$color-breezebay-grad07: linear-gradient(to left top, #dfffea, #7abcff);
+$color-breezebay-hover: $color-breezebay-01;
+$color-breezebay-select: rgba($color-breezebay-04, 0.6);
+$color-breezebay-bullet: $color-breezebay-01;
+
+//seabreeze
+$color-seabreeze-001: #00afea;
+
+$color-seabreeze-01: #c99c5c;
+$color-seabreeze-02: #c99c5c;
+$color-seabreeze-03: #cfbb90;
+$color-seabreeze-04: #7ecef4;
+$color-seabreeze-05: #e5f5fd; //施設・サービス用の文字色
+$color-seabreeze-06: #e2d6a6;
+$color-seabreeze-07: #c99c5d;
+$color-seabreeze-08: #7ecef4;
+$color-seabreeze-09: #394ea4;
+$color-seabreeze-10: #e2d6a6; //問い合わせ、薄い色
+$color-seabreeze-11: #c99c5c; //問い合わせ、濃い色
+$color-seabreeze-12: #ffeed2;
+$color-seabreeze-13: #d5a560;
+$color-seabreeze-14: #e1c990;
+$color-seabreeze-15: #d19a51; // 文字/右上メニュー
+$color-seabreeze-16: #e3d099; // 右上メニュー
+$color-seabreeze-17: #1c208e; // 追従ヘッダー
+$color-seabreeze-19: #dff6fe; // 客室用の背景ラベル文字色
+$color-seabreeze-20: #dd9123; // 客室用(若干施設・サービスの背景色より彩度が高い)
+$color-seabreeze-21: #e5d5a0; // 客室用
+$color-seabreeze-grad01: linear-gradient(330deg, $color-seabreeze-10, $color-seabreeze-11);
+$color-seabreeze-grad02: linear-gradient(358deg, #c4e8f8, #5abded 44%, #3155ae 97%);
+$color-seabreeze-grad04: linear-gradient(to right top, #e2d6a6, #c99c5d);
+$color-seabreeze-grad05: linear-gradient(to left top, #e2d6a6, #c99c5d);
+$color-seabreeze-grad06: linear-gradient(to right top, #7ecef4, #1d2088 90%);
+$color-seabreeze-grad07: linear-gradient(to left top, #7ecef4, #1d2088);
+$color-seabreeze-grad08: linear-gradient(358deg, #ffffff, #5abded 44%, #3155ae 97%);
+$color-seabreeze-hover: $color-seabreeze-01;
+$color-seabreeze-select: rgba(#9e7a48, 0.5);
+$color-seabreeze-bullet: $color-seabreeze-01;
+
+//santamonica
+$color-santamonica-01: #fca606;
+$color-santamonica-02: #ff6d00;
+$color-santamonica-03: #53c2fe;
+$color-santamonica-04: #126aee;
+$color-santamonica-05: #fb9447;
+$color-santamonica-06: #fff6eb;
+$color-santamonica-07: #cfe8f0;
+$color-santamonica-08: #fc9006;
+$color-santamonica-09: #0262c5;
+$color-santamonica-grad: linear-gradient(
+  to right,
+  $color-santamonica-01 0%,
+  #ffba1d 33%,
+  $color-santamonica-03 65%,
+  $color-santamonica-04 100%
+);
+$color-santamonica-grad-sunset: linear-gradient(to left, $color-santamonica-01, #ffce5f);
+$color-santamonica-grad-sunset-02: linear-gradient(
+  to left,
+  $color-santamonica-01 0%,
+  $color-santamonica-01 50%,
+  #ffce5f 50%,
+  #ffce5f 100%
+);
+$color-santamonica-grad-winds: linear-gradient(to left, $color-santamonica-09, $color-santamonica-03);
+$color-santamonica-grad-winds-02: linear-gradient(
+  to left,
+  $color-santamonica-09 0%,
+  $color-santamonica-09 50%,
+  $color-santamonica-03 50%,
+  $color-santamonica-03 100%
+);
+$color-santamonica-hover: $color-santamonica-01;
+// $color-santamonica-reserve: $color-santamonica-01;
+$color-santamonica-select: rgba($color-santamonica-03, 0.6);
+$color-santamonica-bullet: $color-santamonica-01; //or 02(デザインでは02を使っていたところがあったが一旦1に合わせている)
+//brisa
+$color-brisa-01: #152b6f;
+$color-brisa-02: #b7df69;
+$color-brisa-03: #dbefb4;
+$color-brisa-04: #284396;
+$color-brisa-05: #dbefb4;
+$color-brisa-grad: linear-gradient(63.434948822922024deg, $color-brisa-01 0%, $color-brisa-01 0%, $color-brisa-02 100%);
+$color-brisa-grad-02: linear-gradient(-81deg, $color-brisa-01 0%, $color-brisa-02 99%);
+$color-brisa-grad-03: linear-gradient(90deg, $color-brisa-02 0%, $color-brisa-01 100%);
+$color-brisa-grad-04: linear-gradient(179deg, $color-brisa-02 0%, $color-brisa-01 100%);
+$color-brisa-grad: linear-gradient(63.434948822922024deg, $color-brisa-01, $color-brisa-02);
+$color-brisa-grad-02: linear-gradient(-81deg, $color-brisa-01, $color-brisa-02);
+$color-brisa-grad-05: linear-gradient(257deg, $color-brisa-02 0%, $color-brisa-01 100%);
+$color-brisa-select: rgba($color-brisa-01, 0.2);
+$color-brisa-hover: $color-brisa-04;
+$color-brisa-bullet: $color-brisa-02;
+$color-brisa-label1: $color-brisa-01;
+$color-brisa-label2: #abd163;
+
+// memo
+//robertson
+$color-robertson-01: #004990;
+$color-robertson-02: #05cbd5;
+$color-robertson-03: #ddc021;
+$color-robertson-04: #cbac00;
+$color-robertson-05: #07bec5;
+$color-robertson-06: #cef5f7;
+$color-robertson-07: #59afd0;
+$color-robertson-08: #e9f0f6;
+$color-robertson-grad: linear-gradient(
+  63.434948822922024deg,
+  $color-robertson-01 0%,
+  $color-robertson-01 0%,
+  $color-robertson-02 100%
+);
+$color-robertson-grad: linear-gradient(63.434948822922024deg, $color-robertson-01, $color-robertson-02);
+$color-robertson-grad-02: linear-gradient(-81deg, $color-robertson-01, $color-robertson-02);
+$color-robertson-grad-03: linear-gradient(90deg, $color-robertson-02 0%, $color-robertson-01 100%);
+$color-robertson-grad-04: linear-gradient(179deg, $color-robertson-02 0%, $color-robertson-01 100%);
+$color-robertson-grad-05: linear-gradient(257deg, $color-robertson-06, $color-robertson-07);
+$color-robertson-grad-05-dash: linear-gradient(257deg, $color-robertson-01, $color-robertson-02);
+$color-robertson-grad-06: linear-gradient(225deg, $color-robertson-06, $color-robertson-07);
+$color-robertson-select: rgba($color-robertson-02, 0.2);
+$color-robertson-hover: $color-robertson-02;
+$color-robertson-bullet: $color-robertson-03;
+/* フォントファミリー
+指定する際は【必ず】この中の変数を用いる
+--------------------------------------------------------- */
+$ff-resort_luxury-enLabel: Amiri, serif;
+$ff-resort_luxury-ja: 'Hiragino Mincho ProN', '游明朝体', YuMincho, '游明朝 Medium', 'Yu Mincho Medium', '游明朝',
+  'Yu Mincho', 'Noto Serif JP', serif;
+$ff-resort_luxury-en: Times, serif;
+$ff-resort_luxury-zhcn: 'Noto Serif SC', serif;
+$ff-resort_luxury-zhtw: 'Noto Serif TC', serif;
+$ff-resort_luxury-ko: 'Noto Serif KR', serif;
+$ff-resort_luxury-mixed-ja: Amiri, 'Hiragino Mincho ProN', '游明朝体', YuMincho, '游明朝 Medium', 'Yu Mincho Medium',
+  '游明朝', 'Yu Mincho', 'Noto Serif JP', serif;
+$ff-resort_luxury-mixed-zhcn: Amiri, 'Noto Serif SC', serif;
+$ff-resort_luxury-mixed-zhtw: Amiri, 'Noto Serif TC', serif;
+$ff-resort_luxury-mixed-ko: Amiri, 'Noto Serif KR', serif;
+
+$ff-superior-enLabel: 'Tenor Sans', sans-serif;
+$ff-superior-ja: 'Hiragino Kaku Gothic ProN', '游ゴシック体', YuGothic, '游ゴシック Medium', 'Yu Gothic Medium',
+  '游ゴシック', 'Yu Gothic', sans-serif;
+$ff-superior-en: Arial, sans-serif;
+$ff-superior-zhcn: 'Noto Sans SC', sans-serif;
+$ff-superior-zhtw: 'Noto Sans TC', sans-serif;
+$ff-superior-ko: 'Noto Sans KR', sans-serif;
+$ff-superior-mixed-ja: 'Tenor Sans', 'Hiragino Kaku Gothic ProN', '游ゴシック体', YuGothic, '游ゴシック Medium',
+  'Yu Gothic Medium', '游ゴシック', 'Yu Gothic', sans-serif;
+$ff-superior-mixed-zhcn: 'Tenor Sans', 'Noto Sans SC', sans-serif;
+$ff-superior-mixed-zhtw: 'Tenor Sans', 'Noto Sans TC', sans-serif;
+$ff-superior-mixed-ko: 'Tenor Sans', 'Noto Sans KR', sans-serif;
+
+$ff-casual-enLabel: Montserrat, sans-serif;
+$ff-casual-ja: '游ゴシック体', YuGothic, '游ゴシック Medium', 'Yu Gothic Medium', '游ゴシック', 'Yu Gothic',
+  'Hiragino Kaku Gothic ProN', sans-serif;
+$ff-casual-en: Arial, sans-serif;
+$ff-casual-zhcn: 'Noto Sans SC', sans-serif;
+$ff-casual-zhtw: 'Noto Sans TC', sans-serif;
+$ff-casual-ko: 'Noto Sans KR', sans-serif;
+$ff-casual-mixed-ja: Montserrat, '游ゴシック体', YuGothic, '游ゴシック Medium', 'Yu Gothic Medium', '游ゴシック',
+  'Yu Gothic', 'Hiragino Kaku Gothic ProN', sans-serif;
+$ff-casual-mixed-zhcn: Montserrat, 'Noto Sans SC', sans-serif;
+$ff-casual-mixed-zhtw: Montserrat, 'Noto Sans TC', sans-serif;
+$ff-casual-mixed-ko: Montserrat, 'Noto Sans KR', sans-serif;
+/* フォントウェイト
+指定する際は【必ず】この中の変数を用いる
+＊デフォルト値（htmlに指定されている値）は$fw-regular
+--------------------------------------------------------- */
+$fw-regular: 400;
+$fw-medium: 500;
+// @if ($LANG == 'en') {
+//   $fw-medium: 700;
+// }
+$fw-bold: 700;
+/* z-index
+指定する際は【必ず】この中の変数を用いる
+--------------------------------------------------------- */
+$zindex: (
+  contentBg: -1,
+  content0: 0,
+  content1: 1,
+  content2: 2,
+  ui1: 10,
+  // ui2: 11,
+  globalBg: 99,
+  global1: 100,
+  global2: 101,
+  global3: 102,
+  modalBg: 999,
+  modal1: 1000,
+  // modal2: 1001,
+);
+/* easing
+キーワードで指定できない系はこの中の値を用いる。新たに追加も可。
+＊[キーワードで指定できる]の例：linear, ease-out, ease-in-out...
+--------------------------------------------------------- */
+$easing-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+$easing-out-quart: cubic-bezier(0.165, 0.84, 0.44, 1);
+$easing-out-quint: cubic-bezier(0.23, 1, 0.32, 1);
+$easing-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+$easing-inout-quart: cubic-bezier(0.77, 0, 0.175, 1);
+$easing-inout-quint: cubic-bezier(0.86, 0, 0.07, 1);
+/* エレメントサイズ
+--------------------------------------------------------- */
+/* width */
+$width-window-pcmax: 1920px; //PCの断ち切り幅（これ以上大きな幅でもここでぶつ切りになる）
+$width-window-pcdesign: 1440px; //PCのデザインファイルの幅（あまり使用しないが、デザインより幅狭になった時の見た目を調整したい場合などに用いるかも）
+$width-window-pcmin: 1312px; //PCのmin-width＝タブレットでの固定幅
+$width-window-breakpoint: 900px; //仮
+$width-window-spdesign: 375px; //SPのデザインファイルの幅（何かの計算根拠として使うことがあるかも）
+// $width-text-pc: 768px; //横一杯だとテキストが長くなりすぎる時、適度な幅で折り返す
+$width-wrapper: 1184px; //PCのコンテンツ幅
+$width-wrapper-shigira: 984px;
+$width-article: 884px; //PCの記事系の幅
+$width-space-spside: 16px; //SPのコンテンツの左右padding
+$width-space-spside-content: 32px;
+/* height */
+$height-gHeader-resort-pc: 65px;
+$height-gHeader-pc: 41px;
+$height-min-pc: 760px; //「画面の高さいっぱい」の要素も縦が短いと不恰好だったり必要な要素が入りきらなかったりするので
+$height-hotelHeader-pc: 31px;
+$height-fixedHeader-pc: 72px;
+$height-gHeader-sp: 52px;
+$height-hotelHeader-sp: 45px;
+$height-kv-sp: 86.5vh; //画面いっぱい系の要素の高さ（端末によっては合わないこともあるかもしれないけどだいたい）
+/* 使用用途がより具体的なもの
+--------------------------------------------------------- */
+$opacity-hover: 0.6; //hover時透過する系の透過度。hover関連のmixinと併用されることを想定。
+$durationAndEasing-fadeUp: 2s $easing-out-expo; //fadeUp時のdurationとeasing。fadeUp関連のmixinと併用されることを想定。

@@ -1,0 +1,209 @@
+/**
+ * Layouts (length, size)
+ */
+$width-max-mobile: 640px;
+$width-min-tablet: $width-max-mobile + 1px;
+$width-max-tablet: 1280px;
+$width-min-laptop: $width-max-tablet + 1px;
+$width-max-laptop: 1440px;
+$width-min-desktop: $width-max-laptop + 1px;
+
+$width-max-container: 1200px;
+$width-max-content: 960px;
+
+$width-max-modal: 768px;
+
+$header-width: 240px;
+$mobile-header-height: 60px;
+$mobile-header-height-large: 80px;
+$menu-navigation-height: 120px;
+
+$screen-size: (
+  sm: (
+    min: auto,
+    max: $width-max-mobile,
+  ),
+  md: (
+    min: $width-min-tablet,
+    max: $width-max-tablet,
+  ),
+  lg: (
+    min: $width-min-laptop,
+    max: $width-max-laptop,
+  ),
+  xl: (
+    min: $width-min-desktop,
+    max: none,
+  ),
+);
+
+/**
+ * Animation
+ */
+
+$speed-fastest: 170ms;
+$speed-fast: 250ms;
+$speed-normal: 330ms;
+$speed-slow: 500ms;
+$speed-slowest: 1000ms;
+
+$delay-base: 130ms;
+
+$easing-normal: linear;
+$easing-ease-out: cubic-bezier(0.33, 0, 0.24, 1);
+
+/**
+ * Z indexes
+ */
+
+// breakpoint var (first in array is the largest number, etc array.length)
+$z-indexes: (
+  'page-transition-overlay',
+  'modal',
+  'modal-container',
+  'mobile-header-bar',
+  'mobile-header',
+  'mobile-navbar',
+  'page-header-inner',
+  'menu-navigation',
+  'app-banner-text',
+  'app-banner-image'
+);
+
+/**
+ * Font families
+ */
+
+$font-size-family: (
+  base: (
+    base: 'Yu Mincho Pr6N M',
+    bold: 'Yu Mincho Pr6N D',
+    extra: 'Yu Mincho Pr6N E',
+  ),
+  heading: (
+    base: 'Shuei ShogoMincho',
+  ),
+  sans: (
+    base: 'Yu Gothic Pr6N M',
+    bold: 'Yu Gothic Pr6N B',
+  ),
+);
+
+$font-size-family: (
+  base: (
+    base: 'Yu Mincho Pr6N M',
+    bold: 'Yu Mincho Pr6N D',
+  ),
+  heading: (
+    base: 'Shuei ShogoMincho',
+  ),
+  sans: (
+    base: 'Yu Gothic Pr6N M',
+    bold: 'Yu Gothic Pr6N B',
+  ),
+);
+
+$font-size-family-en: (
+  base: (
+    base: 'Lora',
+    bold: 'Lora',
+  ),
+  heading: (
+    base: 'EB Garamond',
+  ),
+  sans: (
+    base: 'Noto Sans',
+    bold: 'Noto Sans',
+  ),
+);
+
+/**
+ * Colors
+ */
+// '$palette-xx' are private variables. Do not use in components and pages.
+$palette-brand: #c81432;
+$palette-black: #000000;
+$palette-black-light: #1a1818;
+$palette-white: #ffffff;
+$palette-gray-100: #f8f8f8;
+$palette-gray-200: #dddddd;
+$palette-gray-300: #c3c3c3;
+$palette-gray-400: #666666;
+$palette-gray-500: #44413c;
+$palette-vermilion: #fa472b;
+$palette-beige: #fbf7ef;
+$palette-beige-dark: #f2eee6;
+$palette-pink: #fecfc6;
+$palette-pink-light: #fbe5db;
+$palette-aqua: #c6edfe;
+$palette-blue-light: #84bae5;
+$palette-deep-red: #be4645;
+$palette-blue: #0968ad;
+$palette-yellow-light: #f7ecd7;
+$palette-yellow: #fcefce;
+$palette-orange: #f9d5a9;
+
+// for background-color
+$background-color: $palette-beige;
+$background-color-primary: $palette-brand;
+$background-color-sub: $palette-beige-dark;
+$background-color-inversion: $palette-gray-500;
+$background-color-light: $palette-white;
+$background-color-dark: $palette-black;
+$background-color-disabled: $palette-gray-200;
+$background-color-hot: $palette-pink;
+$background-color-cold: $palette-aqua;
+$background-color-overlay: rgba($palette-black, 0.7);
+$background-color-answer: $palette-gray-100;
+$background-secondary: $palette-blue-light;
+$background-color-app-banner: $palette-deep-red;
+$background-color-caution: $palette-pink-light;
+$background-color-yellow: $palette-yellow-light;
+$background-color-statement: $palette-yellow;
+$background-color-mochimochi: $palette-orange;
+
+// for border-color
+$border-color: $palette-gray-200;
+$border-color-sub: $palette-gray-400;
+$border-color-primary: $palette-brand;
+$border-color-inversion: $palette-beige;
+$border-color-light: $palette-white;
+$border-color-sub: $palette-gray-400;
+$border-color-header: $palette-beige-dark;
+
+// for color(text-color)
+$color: $palette-gray-500;
+$color-primary: $palette-brand;
+$color-sub: $palette-gray-400;
+$color-inversion: $palette-white;
+$color-error: $palette-vermilion;
+$color-placeholder: $palette-gray-300;
+$color-heading: $palette-black;
+$color-lead: $palette-black;
+$color-secondary: $palette-blue;
+$color-button: $palette-black;
+$color-disabled: $palette-gray-200;
+$color-logo-black: $palette-black-light;
+
+/**
+ * border-radius
+ */
+$border-radius: 6px;
+
+/**
+ * box-shadow
+ */
+$box-shadow: 0 1px 2px rgba($palette-black, 0.16);
+$box-shadow-upper: 0 -1px 2px rgba($palette-black, 0.16);
+
+/**
+ * text-shadow
+ */
+$text-shadow: 0 1px 2px rgba($palette-black, 0.16);
+
+/**
+* hover
+*/
+$hover-box-shadow: 0 2px 18px rgba($palette-black, 12%);
+$hover-opacity: 0.6;
+$hover-image-zoom: 1.05;

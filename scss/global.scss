@@ -1,0 +1,71 @@
+@import './variables.scss';
+@import 'reset';
+
+html {
+  overflow-y: scroll;
+  background-color: $colorWhite;
+  font-size: 15px;
+  line-height: 2em;
+  word-wrap: break-word;
+  color: $colorText;
+  font-weight: $fw-regular;
+
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  @include pc {
+    min-width: $width-window-pcmin;
+    overflow-x: auto;
+  }
+  @include sp {
+    overflow-x: hidden;
+  }
+  main[data-lang='jp'] {
+    @include font-ja-text;
+  }
+  main[data-lang='en'] {
+    @include font-en-text;
+  }
+  main[data-lang='zh_CHT'] {
+    @include font-zhtw-text;
+  }
+  main[data-top-space='true'] {
+    @include pc {
+      padding-top: 180px;
+    }
+    @include sp {
+      padding-top: 105px;
+    }
+  }
+  main[data-home='true'] {
+    @include pc {
+      padding-top: 89px;
+    }
+  }
+}
+a {
+  outline: none;
+  text-decoration: none;
+  color: inherit;
+}
+a,
+button,
+select {
+  @include clickable;
+}
+b,
+strong {
+  font-weight: $fw-bold;
+}
+figure {
+  line-height: 0;
+}
+img {
+  display: block;
+  max-width: 100%;
+  min-height: 1px;
+}
+body[data-menuopen='true'] {
+  position: fixed;
+  width: 100%;
+}

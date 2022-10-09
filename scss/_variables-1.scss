@@ -1,0 +1,133 @@
+// @import url('//fonts.googleapis.com/css?family=Noto+Sans+JP:400,500,700&subset=japanese');
+
+/* 色
+--------------------------------------------------------- */
+$COLOR-MAIN: #1183e4;
+$COLOR-MAIN-BANK: #031f88;
+$COLOR-MAIN-DARK: #05489b;
+$COLOR-ACCENT: #22917b;
+$COLOR-ACCENT-02: #fa8a08;//ex.NEWマーク
+$COLOR-BLACK: #000;
+$COLOR-BLACK-LIGHT: #666;//キャプション
+$COLOR-WHITE: #fff;
+$COLOR-GRAY: #e8e8e8;//罫線で時々出てくる
+$COLOR-GRAY-LIGHT: #fafafa;//フォーム要素の背景色…
+$COLOR-GRAY-BANK: #303030;
+$COLOR-RED: #c00000;
+$COLOR-RED-LIGHT: #faf0f0;
+$COLOR-ORANGE: #fa8a08;
+
+$COLOR-VAL-01: #f4faff;
+$COLOR-VAL-02: #eef2f5;
+$COLOR-VAL-03: #d8dfe4;
+$COLOR-VAL-04: #94a6b5;
+$COLOR-VAL-05: #06284f;
+$COLOR-VAL-06: #e2f4ff;//テーブルの横th
+$COLOR-VAL-07: #c3d4e0;//CVの枠線
+$COLOR-VAL-08: #1183e4;
+$COLOR-VAL-09: #f4fafe;
+
+$COLOR-PANEL-01-01: #22917b;
+$COLOR-PANEL-01-02: #1a6b5b;
+$COLOR-PANEL-02-01: #8f47b3;
+$COLOR-PANEL-02-02: #6c2a8c;
+$COLOR-PANEL-03-01: #1183e4;
+$COLOR-PANEL-03-02: #0e69b6;
+$COLOR-PANEL-04-01: #faa208;
+$COLOR-PANEL-04-02: #fa8a08;
+$COLOR-PANEL-05-01: #4d4d4d;
+$COLOR-PANEL-05-02: #000;
+$COLOR-PANEL-06-01: #265080;
+$COLOR-PANEL-06-02: #06284f;
+$COLOR-PANEL-07-01: #b3474b;
+$COLOR-PANEL-07-02: #99262a;
+$COLOR-PANEL-08-01: #4e99c0;
+$COLOR-PANEL-08-02: #2e86b4;
+$COLOR-PANEL-09-01: #63a642;
+$COLOR-PANEL-09-02: #489820;
+$COLOR-PANEL-10-01: #b95382;
+$COLOR-PANEL-10-02: #a74b7c;
+
+$THEME: '' !default;
+@if $THEME == 'bank' {
+  $COLOR-MAIN: $COLOR-MAIN-BANK;
+  $COLOR-MAIN-DARK: #000;
+
+  $COLOR-VAL-01: #f5f7ff;
+  $COLOR-VAL-02: #ebeff7;
+  $COLOR-VAL-06: #ebeff7;
+  $COLOR-VAL-08: #06284f;
+  $COLOR-VAL-09: #f4f7fe ;
+}
+
+/* font-family
+--------------------------------------------------------- */
+$FONTFAMILY-BASIC: YakuHanJP, 'Noto Sans JP', sans-serif;
+$FONTFAMILY-EN: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+/* font-size
+--------------------------------------------------------- */
+$FONTSIZE-10: 10px;
+$FONTSIZE-12: 12px;
+$FONTSIZE-14: 14px;
+$FONTSIZE-16: 16px;
+$FONTSIZE-18: 18px;
+$FONTSIZE-20: 20px;
+$FONTSIZE-22: 22px;
+$FONTSIZE-24: 24px;
+$FONTSIZE-28: 28px;
+$FONTSIZE-32: 32px;
+$FONTSIZE-36: 36px;
+
+$FONTSIZE-EXPANSION: 1.25;
+
+/* font-weight
+--------------------------------------------------------- */
+$FONTWEIGHT-REGULAR: 400;
+$FONTWEIGHT-MEDIUM: 500;
+$FONTWEIGHT-BOLD: 700;
+
+/* line-height
+--------------------------------------------------------- */
+//比率指定（可能な限りこっちを使う）
+$LINEHEIGHT-BASIC: 1.75;
+$LINEHEIGHT-0: 0;
+$LINEHEIGHT-1: 1;
+$LINEHEIGHT-13: 1.3;
+$LINEHEIGHT-15: 1.5;
+$LINEHEIGHT-16: 1.6;
+$LINEHEIGHT-2: 2;
+//px指定（比率で書ける時はなるべく比率を使い、割り切れない場合だけこっちを使う）
+$LINEHEIGHT-PX-20: 20px;
+$LINEHEIGHT-PX-24: 24px;
+$LINEHEIGHT-PX-40: 40px;
+$LINEHEIGHT-PX-42: 42px;
+$LINEHEIGHT-PX-48: 48px;
+
+/* letter-spacing
+--------------------------------------------------------- */
+$LETTERSPACE-BASIC: 0.05em;
+
+/* 幅
+--------------------------------------------------------- */
+$WIDTH-LARGE-PC: 1680px;
+$WIDTH-DESIGN-PC: 1280px;
+$WIDTH-WRAPPER-PC: 1232px;
+$WIDTH-CONTENT-PC: 1120px;
+$WIDTH-CONTENT-SP-MIN: 343px;
+$WIDTH-CONTENT-PADDING-SP: 16px;
+$WIDTH-PARAGRAPH-BASIC-PC: 732px;
+$WIDTH-PARAGRAPH-FORM-PC: 788px;
+$WIDTH-TH-FORM-PC: 330px;
+$WIDTH-SECTIONBT-PC-BASIC: 250px;
+$WIDTH-SECTIONBT-PC-LONG: 348px;
+$WIDTH-BT-SP: 279px;//375px - 16px * 2 - 32px * 2
+
+/* イージング
+--------------------------------------------------------- */
+$EASING-OUT-QUAD: cubic-bezier(0.250, 0.460, 0.450, 0.940);
+$EASING-OUT-QUART: cubic-bezier(0.165, 0.840, 0.440, 1.000);
+$EASING-OUT-QUINT: cubic-bezier(0.23, 1, 0.32, 1);
+$EASING-OUT-EXPO: cubic-bezier(0.19, 1, 0.22, 1);
+$EASING-IN-OUT-QUART: cubic-bezier(0.770, 0.000, 0.175, 1.000);
+$EASING-IN-OUT-QUINT: cubic-bezier(0.860, 0.000, 0.070, 1.000);

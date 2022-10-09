@@ -1,0 +1,868 @@
+/* color */
+$colorPrimary: #1c2a4e;
+$colorSecondary: #ccab6f;
+$colorWhite: #ffffff;
+$colorBlack1: #000000;
+$colorBlack1Alpha: rgba($colorBlack1, 0.1);
+$colorBlack1Alpha0: rgba($colorBlack1, 0);
+$colorBlack2: #555555;
+$colorBlack3: #333333;
+$colorBlack3Alpha: rgba($colorBlack3, 0.6);
+$colorBlack4: #252230;
+$colorBlack4Alpha: rgba($colorBlack4, 0.9);
+$colorGray1: #999999;
+$colorGray2: #f8f8f8;
+$colorGray3: #f7f7f7;
+$colorGray4: #eeeeee;
+$colorGray5: #cccccc;
+$colorGray6: #bbbfca;
+$colorGray7: #e1e1e1;
+$colorGray8: #cfd4e1;
+$colorGray9: #e3e3e3;
+$colorPink1: #b77293;
+$colorPink2: #e1bbcd;
+$colorGreen1: #7c8b46;
+$colorGreen2: #9eb15b;
+$colorViridian1: #3d9097;
+$colorViridian2: #a4c9cc;
+$colorYellow1: #8d7b31;
+$colorYellow2: #d6bc52;
+$colorBlue1: #4a708e;
+$colorBlue2: #7c9fcd;
+$colorBlue2Alpha: rgba($colorBlue2, 0.1);
+$colorBlue3: #d3ddeb;
+$colorRed1: #c2462b;
+$colorNaivy1: #1c2a5e;
+$colorNaivy2: #d2d4dc;
+$colorNaivy3: #495571;
+$colorGold1: #ac854f;
+$colorGold2: #ecd1a2;
+$colorCream1: #fdf9ef;
+$colorBeige1: #f4f0ec;
+// btcircle, btnコンポーネント
+$colorPrimaryHover: #24335b;
+$colorSecondaryHover: #c29b53;
+// color - unique
+$colorHeadline: $colorBlack3;
+$colorText: $colorBlack2;
+$colorTextNotification: $colorRed1;
+$colorTextLink: $colorBlue2;
+$colorTextLinkHover: $colorPrimary;
+$colorCaption: $colorGray1;
+$colorCaptionAlpha: rgba($colorBlack1, 0.1);
+$colorPlusIcon: $colorGray1;
+$colorDot: $colorGray1;
+$colorMimaru: $colorNaivy1;
+$colorAttention: $colorRed1;
+$colorTextDeActive: $colorGray1;
+$colorImportantNews: rgba($colorRed1, 0.7);
+// Label コンポーネント
+$colorLabelCampaign: $colorPink2;
+$colorLabelNewsRelease: $colorGreen2;
+$colorLabelInformation: $colorViridian2;
+$colorLabelMediaInformation: $colorBlue2;
+$colorLabelExperience: $colorYellow2;
+$colorLabelOthers: $colorGray1;
+$colorListBullet: $colorGold2;
+$colorInput: $colorBlack3;
+$colorPagination: $colorWhite;
+$colorTagHover: $colorBlue3;
+// SwitchBtn コンポーネント
+$colorSwitchBtnTitle: $colorGold1;
+$colorSwitchBtnBg: $colorGray4;
+$colorSwitchBtnBgActive: $colorBlue3;
+// border
+$colorPipeLine: $colorGray5;
+$colorBorder: $colorGray4;
+$colorInputBorder: $colorGray5;
+$colorFooterBorder: $colorNaivy3;
+$colorSectionTitleBorder: $colorGray5;
+/* 背景 */
+$colorBgBase: $colorGray3;
+$colorBgSectionBase: $colorGray4;
+$colorBgBaseBox: $colorGray2;
+$colorBgReserve: $colorBeige1;
+$colorBgCircleTextQ: $colorBeige1;
+$colorCircleIconBg: $colorBeige1;
+$colorIconBtnBg: $colorPrimary;
+$colormodalBg: $colorBlack4Alpha;
+$colorTabBg: $colorGray4;
+$colorTabBgDark: $colorGray9;
+$colorCircleBg: $colorBeige1;
+$colorBackQuote: $colorGray4;
+/* モーダル */
+$modalInterfaceShadow: $colorBlack1Alpha;
+$modalBg: $colorBlack4Alpha;
+/* font-weight */
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-bold: 600;
+/* width */
+$width-window-pcmax: 1980px; //PCの断ち切り幅（これ以上大きな幅でもここでぶつ切りになる）
+$width-window-pcdesign: 1440px; //PCのデザインファイルの幅（あまり使用しないが、デザインより幅狭になった時の見た目を調整したい場合などに用いるかも）
+$width-window-pcmin: 1280px; //PCのmin-width＝タブレットでの固定幅
+$width-window-breakpoint: 900px; //仮
+$width-window-spdesign: 375px; //SPのデザインファイルの幅（何かの計算根拠として使うことがあるかも）
+// $width-text-pc: 768px; //横一杯だとテキストが長くなりすぎる時、適度な幅で折り返す
+$width-titleArea: 780px;
+$width-wrapper: 1184px; //PCのコンテンツ幅
+$width-article: 780px; //PCの記事系の幅
+$width-space-pcside: 64px;
+$width-space-spside: 15px; //SPのコンテンツの左右padding
+$width-space-spside-content: 30px;
+/* height */
+$height-gHeader-pc: 89px;
+$height-min-pc: 760px; //「画面の高さいっぱい」の要素も縦が短いと不恰好だったり必要な要素が入りきらなかったりするので
+$height-gHeader-sp: 52px;
+$height-kv-sp: 86.5vh; //画面いっぱい系の要素の高さ（端末によっては合わないこともあるかもしれないけどだいたい）
+/* easing
+キーワードで指定できない系はこの中の値を用いる。新たに追加も可。
+＊[キーワードで指定できる]の例：linear, ease-out, ease-in-out...
+--------------------------------------------------------- */
+$easing-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+$easing-out-quart: cubic-bezier(0.165, 0.84, 0.44, 1);
+$easing-out-quint: cubic-bezier(0.23, 1, 0.32, 1);
+$easing-inout-quad: cubic-bezier(0.12, 0, 0.5, 1);
+$easing-inout-six: cubic-bezier(0.94, 0.04, 0.58, 1);
+$easing-inout-seven: cubic-bezier(1, 0, 0.33, 1);
+$easing-in-back: cubic-bezier(0.67, -1, 0.47, 1);
+$easing-in-sine: cubic-bezier(0.12, 0, 0.39, 0);
+$easing-in-quad: cubic-bezier(0.11, 0, 0.5, 0);
+$easing-top-circle-in-transform: cubic-bezier(1, 0.07, 0.74, 0.85);
+$easing-top-circle-in-opacity: cubic-bezier(0.81, 0.52, 0.84, 0.62);
+$easing-top-circle-out-transform: cubic-bezier(0.1, 0.61, 0.44, 1);
+$easing-top-circle-out-opacity: cubic-bezier(0.11, 0.08, 0.87, 0.62);
+// $easing-top-circle-out-opacity: cubic-bezier(.11,.08,.97,.79);
+// $easing-top-circle-out-opacity: cubic-bezier(0.06, 1.03, 0.97, 0.79);
+/* z-index
+指定する際は【必ず】この中の変数を用いる
+--------------------------------------------------------- */
+$zindex: (
+  contentBg: -1,
+  content0: 0,
+  content1: 1,
+  content2: 2,
+  ui1: 10,
+  globalBg: 99,
+  global1: 100,
+  gdpr: 800,
+  modalBg: 999,
+  modal1: 1000,
+  opening: 3000,
+  pageTransition: 2000,
+  header: 9,
+  // modal2: 1001,
+);
+/* transition */
+@mixin transitionAccordionOpen {
+  transition: 0.1s $easing-out-quad;
+}
+@mixin transitionAccordionClose {
+  transition: 0.2s $easing-out-quad;
+}
+@mixin transitionHeaderVisible {
+  transition: 0.4s $easing-out-quad;
+}
+@mixin transitionHeaderGnavFadeVisible {
+  transition: opacity 0.6s $easing-out-quad;
+}
+@mixin transitionHeaderGnavTransformVisible {
+  transition: opacity 0.5s 0.8s, transform 0.5s 0.5s $easing-in-quad;
+}
+@mixin transitionHeaderGnavIconVisible($delayTime) {
+  transition: transform 0.5s $delayTime $easing-in-quad;
+}
+@mixin transitionHeaderHide {
+  transition: 0.2s $easing-out-quad;
+}
+@mixin transitionPagination {
+  transition: 0.1s $easing-out-quad;
+}
+@mixin transitionModalVisible {
+  transition: 0.1s $easing-out-quad;
+}
+@mixin transitionModalHide {
+  transition: 0.2s $easing-out-quad;
+}
+@mixin transitionGdprHidden {
+  transition: visibility 0s 0.3s, opacity 0s 0.3s, transform 0.3s $easing-in-back;
+}
+@mixin transitionTopHeading($delayTime) {
+  transition: opacity 0.8s $delayTime, transform 0.8s $delayTime $easing-out-quad;
+}
+@mixin transitionTopCircleIn($delayTime) {
+  transition: opacity 0.8s $delayTime, transform 1s $delayTime $easing-out-quart;
+}
+@mixin transitionTopCircleCover($delayTime1, $delayTime2) {
+  transition: opacity 0.7s $delayTime1 $easing-top-circle-in-opacity,
+    transform 0.8s $delayTime2 $easing-top-circle-in-transform;
+}
+@mixin transitionTopCircleOpen($delayTime1, $delayTime2) {
+  transition: opacity 0.5s $delayTime1 $easing-top-circle-out-opacity,
+    transform 0.9s $delayTime2 $easing-top-circle-out-transform;
+}
+@mixin transitionTopCircleGray($delayTime) {
+  transition: opacity 1s $delayTime, filter 0.8s $delayTime $easing-out-quart;
+}
+@mixin transitionTopIllust($delayTime) {
+  transition: opacity 0.6s $delayTime, transform 0.6s $delayTime $easing-out-quint;
+}
+@mixin transitionFadeUp($delayTime) {
+  transition: opacity 0.8s $delayTime, transform 0.8s $delayTime $easing-out-quart;
+}
+@mixin transitionBgGara($delayTime) {
+  transition: opacity 1.7s $delayTime, transform 1.5s $delayTime $easing-out-quart;
+}
+@mixin transitionZoomOut($delayTime) {
+  transition: opacity 0.8s $delayTime, transform 0.8s $delayTime $easing-out-quart;
+}
+@mixin transitionFade($durationTime, $delayTime) {
+  transition: opacity $durationTime $delayTime $easing-in-sine;
+}
+@mixin transitionRoomBg {
+  transition: transform 0.8s 0.5s, opacity 0.8s 0.5s;
+}
+@mixin transitionBookBnrHide {
+  transition: opacity 0.4s 0.3s, transform 0.6s $easing-in-quad;
+}
+@mixin transitionBookBnrVisible {
+  transition: opacity 0.5s 0.2s, transform 0.6s $easing-out-quad;
+}
+@mixin transitionCloseModalButtonOut {
+  transition: opacity 0.5s $easing-out-quad;
+}
+@mixin transitionBtCircleOut {
+  transition: transform 0.3s $easing-out-quad, background-color 0.3s $easing-out-quad;
+}
+@mixin transitionExperienceCardHover {
+  transition: transform 0.3s $easing-out-quad;
+}
+@mixin transitionOpening {
+  transition: opacity 0.8s 1.2s $easing-in-quad;
+}
+@mixin transitionOpeningLogo {
+  transition: filter 0.8s 1.5s $easing-in-quad;
+}
+@mixin transitionOpeningBlue {
+  transition: opacity 1.2s 0.7s, transform 1s 0.2s ease-in-out;
+}
+@mixin transitionUnderlineHover {
+  transition: transform 0.3s $easing-in-quad;
+}
+@mixin pageTransition {
+  transition: opacity 1s $easing-out-quad;
+}
+@mixin kvTransition {
+  transition: opacity 0.7s 0.3s $easing-out-quad;
+}
+@mixin menuTransitionSp {
+  transition: opacity 0.4s $easing-out-quad;
+}
+@mixin keyvisualOpacity {
+  transition: opacity 0.4s $easing-out-quad;
+}
+
+@mixin pagination {
+  position: relative;
+  text-align: center;
+  z-index: map-get($zindex, content1);
+  > span {
+    width: 5px;
+    height: 5px;
+    opacity: 0.5;
+    background-color: $colorPagination;
+    @include transitionPagination;
+    & + span {
+      margin-left: 5px;
+    }
+    &:global(.swiper-pagination-bullet-active) {
+      background-color: $colorPagination;
+      opacity: 1 !important;
+    }
+  }
+}
+
+@function stripUnit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+  @return $number;
+}
+/* beforeまたはafter擬似要素を使ってブロックレベル要素を作り、マージンの相殺を防ぐ
+MEMO:beforeまたはafter要素に対して指定することを想定している(それ以外の要素にも指定可ではある)
+--------------------------------------------------------- */
+@mixin makeBlockElem {
+  display: block;
+  height: 0;
+  overflow: hidden;
+  content: '.';
+}
+@mixin cutLineSpace(
+  $fontSize: null,
+  $lineHeight: null,
+  //擬似要素ではなくそれ自体にネガティブマージンをつける（基本は擬似要素につけるが、文字省略などoverflow:hiddenがついてる場合に上下が微かに切れてしまうため、これをtrueにする）
+  $isOwn: false,
+  $hasEm: false
+) {
+  font-size: $fontSize;
+  line-height: $lineHeight;
+
+  $_topVal: null;
+  $_bottomVal: null;
+
+  @if str-index(#{$lineHeight}, 'px') {
+    //lineheightがpx指定の時
+    $_marginVal: ($lineHeight - $fontSize) * -0.5;
+    @if (($_marginVal * 2) % 2 == 0) {
+      //上下のマージンが整数pxになる時は両方同じ値
+      $_topVal: $_marginVal;
+      $_bottomVal: $_marginVal;
+    } @else {
+      //小数点を含む時は整数で分ける
+      $_topVal: ceil($_marginVal);
+      $_bottomVal: floor($_marginVal);
+    }
+  } @else {
+    //lineheightが単位なし指定の時
+    $_em: ($lineHeight - 1) * -0.5em; //上下の余白のem指定での大きさ
+    $_px: stripUnit($fontSize) * ($lineHeight - 1) * 0.5; //上下の余白のpx指定での大きさ
+    @if (($_px * 2) % 2 == 0) {
+      //上下のマージンが整数pxになる時はem指定のまま
+      $_topVal: $_em;
+      $_bottomVal: $_em;
+    } @else {
+      //小数点を含む時はpxに直す
+      $_topVal: ceil($_px) * -1px;
+      $_bottomVal: floor($_px) * -1px;
+    }
+  }
+
+  @if ($isOwn) {
+    margin-top: $_topVal;
+    margin-bottom: $_bottomVal;
+  } @else {
+    &:before,
+    &:after {
+      @include makeBlockElem;
+    }
+    &:before {
+      margin-bottom: $_topVal;
+    }
+    &:after {
+      margin-top: $_bottomVal;
+    }
+  }
+}
+/* SEO的に入っているべきだが見えて欲しくないテキストに指定（親要素にrelativeつける）
+--------------------------------------------------------- */
+@mixin hideText {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+/* ウィンドウ幅に応じて出し分け
+（これ単体で呼び出すことは滅多にない。基本は「レイアウトがPCかSPか」の方を使い、どうしてもTABレイアウトなど調整が必要なものはこれを用いる。）
+--------------------------------------------------------- */
+@mixin mq($conf: ()) {
+  @if (map-get($conf, minW) and map-get($conf, maxH)) {
+    @media #{if(map-get($conf, print), 'print, ', '')}screen and (min-width: map-get($conf, minW)) and (max-height: map-get($conf, maxH) - 1px) {
+      @content;
+    }
+  } @else if (map-get($conf, minH) and map-get($conf, maxW)) {
+    @media #{if(map-get($conf, print), 'print, ', '')}screen and (min-height: map-get($conf, minH)) and (max-width: map-get($conf, maxW) - 1px) {
+      @content;
+    }
+  } @else if (map-get($conf, minW) and map-get($conf, maxW)) {
+    @media #{if(map-get($conf, print), 'print, ', '')}screen and (min-width: map-get($conf, minW)) and (max-width: map-get($conf, maxW) - 1px) {
+      @content;
+    }
+  } @else if (map-get($conf, minW)) {
+    @media #{if(map-get($conf, print), 'print, ', '')}screen and (min-width: map-get($conf, minW)) {
+      @content;
+    }
+  } @else if (map-get($conf, maxW)) {
+    @media #{if(map-get($conf, print), 'print, ', '')}screen and (max-width: map-get($conf, maxW) - 1px) {
+      @content;
+    }
+  } @else if (map-get($conf, minH) and map-get($conf, maxH)) {
+    @media #{if(map-get($conf, print), 'print, ', '')}screen and (min-height: map-get($conf, minH)) and (max-height: map-get($conf, maxH) - 1px) {
+      @content;
+    }
+  } @else if (map-get($conf, minH)) {
+    @media #{if(map-get($conf, print), 'print, ', '')}screen and (min-height: map-get($conf, minH)) {
+      @content;
+    }
+  } @else if (map-get($conf, maxH)) {
+    @media #{if(map-get($conf, print), 'print, ', '')}screen and (max-height: map-get($conf, maxH) - 1px) {
+      @content;
+    }
+  }
+}
+/* レイアウトがPCかSPか
+--------------------------------------------------------- */
+@mixin pc {
+  @include mq(
+    (
+      minW: $width-window-breakpoint,
+      print: true,
+    )
+  ) {
+    @content;
+  }
+}
+@mixin sp {
+  @include mq(
+    (
+      maxW: $width-window-breakpoint,
+    )
+  ) {
+    @content;
+  }
+}
+/* レイアウト用window幅
+--------------------------------------------------------- */
+@mixin pc-narrow {
+  @include mq(
+    (
+      minW: $width-window-breakpoint,
+      maxW: $width-window-pcmin,
+    )
+  ) {
+    @content;
+  }
+}
+@mixin pc-wide {
+  @include mq(
+    (
+      minW: $width-window-pcmax,
+    )
+  ) {
+    @content;
+  }
+}
+/* 言語の出し分け
+--------------------------------------------------------- */
+@mixin lang-ja {
+  main[data-lang='jp'] & {
+    @content;
+  }
+}
+@mixin lang-en {
+  main[data-lang='en'] & {
+    @content;
+  }
+}
+@mixin lang-zhtw {
+  main[data-lang='zh_CHT'] & {
+    @content;
+  }
+}
+/* タッチデバイスか否か
+--------------------------------------------------------- */
+@mixin device-desktop {
+  main[data-device='desktop'] & {
+    @content;
+  }
+}
+@mixin device-touch {
+  main[data-device='touch'] & {
+    @content;
+  }
+}
+/* ブラウザごとの出し分け
+--------------------------------------------------------- */
+@mixin browser-ie {
+  main[data-browser='IE'] & {
+    @content;
+  }
+}
+/* font
+--------------------------------------------------------- */
+@mixin font-ja-headline {
+  font-family: 'Shippori Mincho B1', '游明朝体', YuMincho, '游明朝 Medium', 'Yu Mincho Medium', '游明朝', 'Yu Mincho',
+    'Noto Serif JP', serif;
+}
+@mixin font-ja-text {
+  font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', '游ゴシック体', YuGothic, '游ゴシック Medium',
+    'Yu Gothic Medium', '游ゴシック', 'Yu Gothic', sans-serif;
+}
+@mixin font-en-headline {
+  font-family: 'Noto Serif JP', serif;
+}
+@mixin font-en-text {
+  font-family: 'DM Sans', sans-serif;
+}
+@mixin font-zhtw-headline {
+  font-family: 'Noto Serif TC', serif;
+}
+@mixin font-zhtw-text {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+@mixin font-headline {
+  @include lang-ja {
+    @include font-ja-headline;
+  }
+  @include lang-en {
+    @include font-en-headline;
+  }
+  @include lang-zhtw {
+    @include font-zhtw-headline;
+  }
+}
+@mixin font-text {
+  @include lang-ja {
+    @include font-ja-text;
+  }
+  @include lang-en {
+    @include font-en-text;
+  }
+  @include lang-zhtw {
+    @include font-zhtw-text;
+  }
+}
+/* クリッカブルなエリアのスタイル
+（aやbuttonには初めからつけてるので、追加要素に使うことはほとんどないかも）
+--------------------------------------------------------- */
+@mixin clickable {
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+/* ドット
+--------------------------------------------------------- */
+@mixin dot($position: top, $space: 2px, $size: 1px, $color: currentColor) {
+  @if ($position == top or $position == bottom) {
+    background-image: linear-gradient(to right, $color, $color $size, transparent $size, transparent $space);
+    background-repeat: repeat-x;
+    background-position: center $position;
+    background-size: $space + $size $size;
+  } @else {
+    background-image: linear-gradient(to bottom, $color, $color $size, transparent $size, transparent $space);
+    background-repeat: repeat-y;
+    background-position: $position center;
+    background-size: $size $space + $size;
+  }
+}
+/* hoverの見た目を作るときは【必ず】このmixinで
+--------------------------------------------------------- */
+@mixin hover($parent: null, $before: false, $after: false) {
+  @include device-desktop {
+    backface-visibility: hidden;
+  }
+  @if $parent {
+    #{$parent}:hover &,
+    #{$parent}:focus & {
+      @include device-desktop {
+        @content;
+      }
+    }
+    #{$parent}:active & {
+      @include device-touch {
+        @content;
+      }
+    }
+  } @else {
+    @include device-desktop {
+      &:hover,
+      &:focus {
+        @content;
+      }
+      @if $before {
+        &:hover::before,
+        &:focus::before {
+          @content;
+        }
+      }
+      @if $after {
+        &:hover::after,
+        &:focus::after {
+          @content;
+        }
+      }
+    }
+    @include device-touch {
+      &:active {
+        opacity: 0.8;
+        @content;
+      }
+      @if $before {
+        &:active::before {
+          opacity: 0.8;
+          @content;
+        }
+      }
+      @if $after {
+        &:active::after {
+          opacity: 0.8;
+          @content;
+        }
+      }
+    }
+  }
+}
+
+/* テキストリンクのデフォルトスタイル */
+@mixin innerTextLink {
+  color: $colorTextLink;
+  display: inline-block;
+  &:after {
+    content: '';
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    display: inline-block;
+    background-color: $colorTextLink;
+    transform: scaleX(0);
+    transform-origin: right;
+    @include basicHoverTransition(transform);
+  }
+  @include hover {
+    &:after {
+      transform-origin: left;
+      transform: scaleX(1);
+    }
+  }
+}
+
+/* よくあるtransition設定
+--------------------------------------------------------- */
+//による色変化 - テキストやボーダーなど
+@mixin basicHoverTransition(
+  $props: null,
+  //transitionするプロパティ（複数ある場合は半角スペースつなぎで）
+  $parent: null,
+  //親要素
+  $before: false,
+  //::beforeもhoverによる変化がある場合（に、mouseon時はtransitionせずmouseout時のみするように設定する）。$parent, $isPseudoと同時指定されることはない
+  $after: false,
+  //::afterもhoverによる変化がある場合（に、mouseon時はtransitionせずmouseout時のみするように設定する）。$parent, $isPseudoと同時指定されることはない
+  $isPseudo: false //これ自身がbefore or afterな時。$parent/$before/$afterと同時に指定されることはない。
+) {
+  @if $props {
+    $val: '';
+    @for $i from 1 through length($props) {
+      $val: $val + nth($props, $i) + ' 200ms ease-out';
+      @if ($i != length($props)) {
+        $val: $val + ', ';
+      }
+    }
+
+    transition: unquote($val);
+  }
+
+  @if $isPseudo {
+  } @else {
+    @include hover($parent, $before, $after) {
+      transition: 0.2s;
+    }
+  }
+}
+
+@keyframes textLinkUnderlineKeyframe {
+  0% {
+    transform-origin: right;
+    transform: scaleX(1);
+  }
+  29% {
+    transform-origin: right;
+    transform: scaleX(0);
+  }
+  30% {
+    transform-origin: left;
+    transform: scaleX(0);
+  }
+  60% {
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+
+  100% {
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+}
+
+@keyframes pageTransitionTrue {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes pageTransitionFalse {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@mixin pageTransitionTrueAnimation {
+  animation: pageTransitionTrue 1s $easing-out-quad forwards;
+}
+@mixin pageTransitionFalseAnimation {
+  animation: pageTransitionFalse 1s $easing-out-quad forwards;
+}
+
+@mixin textLinkUnderlineAnimation {
+  animation: textLinkUnderlineKeyframe 0.8s ease-out infinite;
+}
+
+@mixin linkUnderlineAnimation($type, $noHover: false) {
+  // experienceCardとcontentCard用の複数行にアンダーラインを付けるとき
+  // 特殊なので注意
+  @if $type == 'multiple-line' {
+    color: transparent;
+    display: -webkit-box;
+    position: absolute;
+    overflow: hidden;
+    text-decoration-line: underline;
+    text-decoration-color: $colorText;
+    transform: scaleX(0) translateZ(0);
+    transform-origin: right;
+    @include transitionUnderlineHover;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  } @else {
+    display: inline-block;
+    position: relative;
+
+    &:after {
+      background-color: currentColor;
+      bottom: -2px;
+      content: '';
+      display: inline-block;
+      height: 1px;
+      left: 0;
+      position: absolute;
+      transform: scaleX(0);
+      transform-origin: right;
+      width: 100%;
+      @include transitionUnderlineHover();
+    }
+
+    @include hover {
+      &:after {
+        transform-origin: left;
+        transform: scaleX(1);
+      }
+    }
+
+    @if $type == 'underline-from-center' {
+      &:after {
+        transform-origin: center;
+      }
+
+      @include hover {
+        &:after {
+          transform-origin: center;
+          transform: scaleX(1);
+        }
+      }
+    }
+  }
+}
+
+// experienceCardとcontentCard用のリンクなし用
+@mixin textLinkUnderlineNoLink {
+  color: transparent;
+  display: -webkit-box;
+  position: absolute;
+  overflow: hidden;
+}
+
+@keyframes circleIconAppearKeyframe {
+  0% {
+    opacity: 0;
+    transform: scale(0.88);
+  }
+  40% {
+    transform: scale(1.01);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@mixin circleIconAppearAnimation {
+  animation: circleIconAppearKeyframe 1.6s ease forwards;
+}
+
+@keyframes circleIconDisappearKeyframe {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.88);
+  }
+}
+
+@mixin circleIconDisappearAnimation {
+  animation: circleIconDisappearKeyframe 0.5s ease-out forwards;
+}
+
+@keyframes bounceSelectArrowKeyframe {
+  0% {
+    transform: translateY(-50%);
+  }
+  50% {
+    transform: translateY(calc(-50% + 5px));
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+@keyframes bounceSelectArrowKeyframeShort {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@mixin bounceSelectArrowAnimation {
+  animation: bounceSelectArrowKeyframe 0.3s $easing-inout-quad;
+}
+
+@mixin bounceSelectArrowAnimationShort {
+  animation: bounceSelectArrowKeyframeShort 0.3s $easing-inout-quad;
+}
+
+@keyframes bounceBottomKeyframe {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@mixin bounceBottomAnimation {
+  animation: bounceBottomKeyframe 0.3s $easing-inout-quad;
+}
