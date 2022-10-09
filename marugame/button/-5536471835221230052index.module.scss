@@ -1,0 +1,86 @@
+@import 'styles/variables.scss';
+@import 'styles/functions.scss';
+@import 'styles/mixins.scss';
+
+.a-button {
+  @include font(base, bold);
+  @include card-base;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: min(327px, 100%);
+  min-height: 64px;
+  font-size: 16px;
+  color: $color-button;
+  line-height: 27px;
+  position: relative;
+
+  @include screen(sm) {
+    width: 100%;
+  }
+
+  &:not([data-type='primary']):not([data-type='secondary']) {
+    transition: color $easing-normal $speed-fastest;
+    @include hover() {
+      color: $color-primary;
+    }
+  }
+
+  &[data-type='primary'],
+  &[data-type='secondary'] {
+    transition: opacity $easing-normal $speed-fastest;
+    @include hover() {
+      opacity: $hover-opacity;
+    }
+  }
+
+  &[data-type='primary'] {
+    color: $color-inversion;
+    background-color: $background-color-primary;
+  }
+
+  &[data-type='secondary'] {
+    color: $color-inversion;
+    background-color: $background-color-inversion;
+  }
+
+  &[data-size='small'] {
+    width: min(240px, 100%);
+    min-height: 52px;
+    font-size: 14px;
+    line-height: 24px;
+
+    @include screen(sm) {
+      width: min(200px, 100%);
+      min-height: 42px;
+    }
+  }
+
+  &[data-color='dark'] {
+    background-color: $palette-gray-100;
+  }
+}
+
+.a-button__icon-wrapper {
+  display: block;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  transform: translate(0, -50%);
+  line-height: 0;
+
+  &:first-child {
+    right: auto;
+    left: 24px;
+  }
+
+  &:first-child[data-name='arrow'] {
+    transform: rotate(180deg) translate(0, 50%);
+  }
+
+  [data-device='sp'] & {
+    right: 12px;
+  }
+}

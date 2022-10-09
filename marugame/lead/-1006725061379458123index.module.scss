@@ -1,0 +1,53 @@
+@import 'styles/variables.scss';
+@import 'styles/functions.scss';
+@import 'styles/mixins.scss';
+
+.a-lead {
+  @include font(heading);
+  @include writing(vertical);
+  display: inline-block;
+  font-size: 18px;
+  line-height: 36px;
+  letter-spacing: 0.06em;
+
+  @include screen(sm) {
+    font-size: 14px;
+    line-height: 28px;
+  }
+
+  &[data-size='small'] {
+    font-size: 16px;
+    line-height: 32px;
+  }
+
+  &[data-size='large'] {
+    font-size: 22px;
+    line-height: 46px;
+
+    @include screen(sm) {
+      font-size: 18px;
+      line-height: 40px;
+    }
+  }
+
+  &[data-direction='horizontal'] {
+    @include writing(horizontal);
+    line-height: 32px;
+    letter-spacing: 0;
+
+    @include screen(sm) {
+      line-height: 24px;
+    }
+
+    &[data-size='large'] {
+      line-height: 36px;
+      @include screen(sm) {
+        line-height: 32px;
+      }
+    }
+  }
+
+  &[data-color='light'] {
+    color: $color-inversion;
+  }
+}

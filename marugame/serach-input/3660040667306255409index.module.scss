@@ -1,0 +1,41 @@
+@import 'styles/variables.scss';
+@import 'styles/functions.scss';
+@import 'styles/mixins.scss';
+
+.a-search-input {
+  position: relative;
+}
+
+.a-search-input__input {
+  $height: 48px;
+  height: $height;
+  box-shadow: $box-shadow;
+  border-radius: $height / 2;
+  width: 100%;
+  padding: 0 55px 0 $height / 2;
+
+  &::placeholder {
+    color: $color-placeholder;
+  }
+
+  &::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+  }
+}
+
+.a-search-input__button {
+  font-size: 0;
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  right: 23px;
+  top: 50%;
+  transform: translate(0, -50%);
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.a-search-input__button-label {
+  position: absolute;
+  right: 100vw;
+}
